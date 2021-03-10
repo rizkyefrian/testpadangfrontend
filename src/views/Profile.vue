@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
           <template v-if="isLoggedIn">
-            <h5 class="card-title">{{user.name}}</h5>
+            <h5 class="card-title">{{user.firstname}} {{user.lastname}}</h5>
             <p class="card-text">{{user.email}}</p>
           </template>
         </div>

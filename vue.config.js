@@ -1,6 +1,6 @@
 module.exports = {
     devServer: {
-      proxy: 'http://localhost:8000//'
+      proxy: 'http://testpadang.000webhostapp.com/'
     //   '^/api': { 
     //     target: 'http://testpadang.000webhostapp.com/', 
     //     changeOrigin: true, 
