@@ -9,8 +9,8 @@ import { setHeaderToken } from '../utils/auth'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-// axios.defaults.baseURL = 'http://localhost:8000/api/'
-axios.defaults.baseURL = 'https://testpadang.000webhostapp.com/api/'
+axios.defaults.baseURL = 'http://localhost:8000/api/'
+// axios.defaults.baseURL = 'https://testpadang.000webhostapp.com/api/'
 
 Vue.config.productionTip = false
 
