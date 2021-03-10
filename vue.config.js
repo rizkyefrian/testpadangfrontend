@@ -1,6 +1,6 @@
 module.exports = {
     devServer: {
-      proxy: 'http://testpadang.000webhostapp.com/api/'
+      proxy: 'https://testpadang.000webhostapp.com/'
       
     }
 }
