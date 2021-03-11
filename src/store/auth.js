@@ -35,11 +35,13 @@ export default{
                setHeaderToken(token) 
                dispatch('get_user')
                resolve(response)
+               console.log("success")
              })
              .catch(err => {
                commit('reset_user')  
                localStorage.removeItem('token')
                reject(err)
+               console.log("error")
             })
           })
         },

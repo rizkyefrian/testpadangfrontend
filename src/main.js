@@ -8,8 +8,11 @@ import { setHeaderToken } from '../utils/auth'
 
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+//url api backend
+// axios.defaults.baseURL = 'http://testpadang.000webhostapp.com/api' 
 
-axios.defaults.baseURL = 'http://localhost:8080/api/'
+//url api local
+axios.defaults.baseURL = 'http://localhost:8000/api/'
 
 Vue.config.productionTip = false
 
