@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
               <label for="confirmpassword">Confirm Password</label>
-              <input v-model="confirmpassword" type="password" class="form-control"  v-validate="'required|target:password'">
+              <input v-model="confirmpassword" type="password" class="form-control"  v-validate="'required|confirmed:password'" ref="password">
               <span class="glyphicon glyphicon-eye-open"></span>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -59,18 +59,25 @@ export default {
         email: this.email,
         password: this.password,
       };
-      this.$store
-        .dispatch("register", data)
-        .then(response => {
-          console.log(response)
-          alert("Congratulations! Registration is succesful")
-          this.$router.push({
-            name: 'Login'
+      if(this.password == this.confirmpassword){
+
+        this.$store
+          .dispatch("register", data)
+          .then(response => {
+            console.log(response)
+            alert("Congratulations! Registration is succesful")
+            this.$router.push({
+              name: 'Login'
+            })
+          }).catch(error => {
+            alert("Oops! Registration failed, Please check your data.")
+            this.errors = error.response.data.errors
           })
-        }).catch(error => {
-          alert("Oops! Registration failed, Please check your data.")
-          this.errors = error.response.data.errors
-        })
+      }
+      else{
+        alert("Oops! Registration failed, Please check your data.")
+        
+      }
     }
   }
 };
